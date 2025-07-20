@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Motion Detection Demo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background: #f9f9f9;
+      padding: 2rem;
+    }
+    h1 {
+      margin-bottom: 2rem;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .demo-box {
+      max-width: 400px;
+    }
+    .label {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    video, img {
+      max-width: 100%;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚗 Motion Detection: Before vs After</h1>
+
+  <div class="container">
+    <div class="demo-box">
+      <div class="label">Before (Original Footage)</div>
+      <video src="input.mp4" controls autoplay loop muted></video>
+    </div>
+    <div class="demo-box">
+      <div class="label">After (Detected Output)</div>
+      <img src="output.gif" alt="Output GIF" />
+    </div>
+  </div>
+</body>
+</html>
