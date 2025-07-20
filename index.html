@@ -5,32 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Motion Detection Demo</title>
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: sans-serif;
-      text-align: center;
-      background: #f9f9f9;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
       padding: 2rem;
     }
+
     h1 {
       margin-bottom: 2rem;
+      font-size: 2rem;
+      text-align: center;
     }
+
     .container {
       display: flex;
       justify-content: center;
-      gap: 40px;
+      align-items: center;
+      gap: 60px;
       flex-wrap: wrap;
     }
+
     .demo-box {
-      max-width: 400px;
+      max-width: 600px;
+      text-align: center;
     }
+
     .label {
       font-weight: bold;
-      margin-bottom: 10px;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
     }
+
     video, img {
-      max-width: 100%;
-      border: 2px solid #ccc;
-      border-radius: 10px;
+      width: 100%;
+      max-width: 600px;
+      border: 3px solid #555;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      video, img {
+        max-width: 90vw;
+      }
     }
   </style>
 </head>
@@ -44,7 +78,7 @@
     </div>
     <div class="demo-box">
       <div class="label">After (Detected Output)</div>
-      <img src="./media/vehicle detection output.gif" alt="Output GIF" />
+      <img src="./media/vehicle detection output.gif" alt="Output GIF" loading="lazy"/>
     </div>
   </div>
 </body>
